@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <time.h>
 
 #include "nat_traversal.h"
 
@@ -22,10 +23,11 @@ int verbose = 0;
 
 int main(int argc, char** argv)
 {
+    srand((unsigned)time(NULL));
     char* stun_server = stun_servers[0];
     char local_ip[16] = "0.0.0.0";
     uint16_t stun_port = DEFAULT_STUN_SERVER_PORT;
-    uint16_t local_port = DEFAULT_LOCAL_PORT;
+    uint16_t local_port =  rand() % 20000 + 10000;;
     char* punch_server = NULL;
     uint32_t peer_id = 0;
     int ttl = 10;
