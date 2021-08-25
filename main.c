@@ -14,9 +14,7 @@
 
 // use public stun servers to detect port allocation rule
 static char *stun_servers[] = {
-    "stun.ideasip.com",
-    "stun.ekiga.net",
-    "203.183.172.196"
+    "stun.ekiga.net"
 };
 
 // definition checked against extern declaration
