@@ -15,7 +15,7 @@
 
 // use public stun servers to detect port allocation rule
 static char *stun_servers[] = {
-    "stun.ekiga.net"
+    "stun.voipbuster.com"
 };
 
 // definition checked against extern declaration
